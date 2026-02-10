@@ -1,0 +1,45 @@
+:root {
+  /* --- FÄRGER --- */
+  /* Baserat på din design (neongrön, svart och accenter) */
+  --color-primary: #b2ffa9;
+  --color-bg-dark: #0d1b1e;
+  --color-bg-light: #f8fdf8;
+  --color-text-dark: #0d1b1e;
+  --color-text-light: #f8fdf8;
+
+  /* Accentfärger (från dina geometriska former och Tesla-logon) */
+  --color-accent-green: #f8fdf8;
+  --color-nav-hover: #dcffd8;
+
+  /* --- SPACING (8-point grid) --- */
+  /* Långa namn */
+  --spacing-xs: 0.5rem; /* 8px  */
+  --spacing-sm: 1rem; /* 16px */
+  --spacing-md: 1.5rem; /* 24px */
+  --spacing-lg: 2rem; /* 32px */
+  --spacing-xl: 3rem; /* 48px */
+  --spacing-xxl: 4rem; /* 64px */
+
+  /* Korta alias (för snabbare kodning) */
+  --sp-xs: var(--spacing-xs);
+  --sp-sm: var(--spacing-sm);
+  --sp-md: var(--spacing-md);
+  --sp-lg: var(--spacing-lg);
+  --sp-xl: var(--spacing-xl);
+
+  /* --- TYPOGRAFI (Fluid Responsive med clamp) --- */
+  /* Clamp(min-storlek, skalnings-värde, max-storlek) */
+  --font-h1: clamp(3.5rem, 12vw, 10rem);
+  --font-h2: clamp(2rem, 6vw, 3.5rem);
+  --font-h3: clamp(1.5rem, 4vw, 2.5rem);
+  --font-h4: clamp(1.25rem, 3vw, 1.75rem);
+  --font-h5: clamp(1.1rem, 2vw, 1.25rem);
+  --font-h6: clamp(1rem, 1.5vw, 1.1rem);
+
+  --font-body: 1rem;
+  --font-nav: 1.1rem;
+
+  /* --- ÖVRIGT --- */
+  --border-radius: 4px; /* För knappar som "Ladda ner CV" [cite: 10, 20] */
+  --transition-fast: 0.2s ease;
+}
