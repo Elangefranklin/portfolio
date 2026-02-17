@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-sm) var(--spacing-xxl); /* Specific design padding */
+  padding: v var(--spacing-xxl); /* Specific design padding */
   max-width: 1440px;
   margin: 0 auto;
 }
