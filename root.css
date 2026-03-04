@@ -40,6 +40,10 @@
   --font-nav: 1.1rem;
 
   /* --- ÖVRIGT --- */
-  --border-radius: 4px; /* För knappar som "Ladda ner CV" [cite: 10, 20] */
+  --border-radius: 4px;
+  --border-radius-sm: 1rem;
+  --border-radius-md: 2rem;
+  --border-radius-lg: 3rem;
+  /* För knappar som "Ladda ner CV" [cite: 10, 20] */
   --transition-fast: 0.2s ease;
 }

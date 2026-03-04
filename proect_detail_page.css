@@ -1,0 +1,351 @@
+.project_detail_page_intro_section {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 50dvh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: var(--spacing-xxl) 0;
+  overflow: hidden;
+}
+
+.project_detail_page_bg_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.project_detail_page_bg_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project_detail_page_bg_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 68.103%,
+    rgba(0, 0, 0, 0.33) 100%
+  );
+}
+
+.project_detail_page_intro_container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 var(--spacing-xxl);
+}
+
+.project_detail_page_title_container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-width: 667px;
+}
+
+.project_detail_page_title {
+  font-family: "Tanker", sans-serif;
+  font-size: var(--font-h2);
+  color: var(--color-text-light);
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+}
+
+.project_detail_page_subtitle {
+  font-family: "Chivo", sans-serif;
+  font-size: var(--font-h4);
+  color: var(--color-text-light);
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* --- Project Info Bar --- */
+.project_detail_page_info_section {
+  width: 100%;
+  background-color: var(--color-nav-hover); /* #dcffd8 */
+  padding: var(--spacing-md) 0;
+}
+
+.project_detail_page_info_container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xxl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.project_info_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  text-align: center;
+}
+
+.project_info_label {
+  font-family: "Chivo", sans-serif;
+  font-weight: 700;
+  font-size: var (--font-body);
+  color: var(--color-text-dark);
+  text-transform: uppercase;
+}
+
+.project_info_value {
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: var(--font-h5);
+  color: var(--color-text-dark);
+}
+
+/* --- Project Background Section --- */
+.project_background_section {
+  width: 100%;
+  background-color: var(--color-bg-light); /* Off-white #f8fdf8 */
+  padding: var(--spacing-xxl) 0;
+}
+
+.project_background_container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xxl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.project_background_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.project_background_title {
+  font-family: "Tanker", sans-serif;
+  font-size: var(--font-h3);
+  color: var(--color-text-dark);
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 400;
+}
+
+.project_background_text {
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: var(--font-h4);
+  color: var(--color-text-dark);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.project_background_media {
+  flex: 1;
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+}
+
+.project_background_img {
+  width: 100%;
+  height: auto; /* Allow image to preserve its aspect ratio naturally */
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Project Process Section --- */
+.project_process_section {
+  width: 100%;
+  background-color: var(--color-bg-dark); /* Black */
+  padding: var(--spacing-xxl) 0;
+}
+
+.project_process_container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xxl);
+  display: flex;
+  align-items: center; /* Vertically center image and text block */
+  gap: var(--spacing-xl);
+}
+
+.project_process_media {
+  flex: 1;
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+}
+
+.project_process_img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.project_process_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.project_process_title {
+  font-family: "Tanker", sans-serif;
+  font-size: var(--font-h3);
+  color: var(--color-text-light);
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 400;
+}
+
+.project_process_text {
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: var(--font-h4);
+  color: var(--color-text-light);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* --- Project Result Section --- */
+.project_result_section {
+  width: 100%;
+  background-color: var(--color-bg-light); /* Off-white #f8fdf8 */
+  padding: var(--spacing-xxl) 0;
+}
+
+.project_result_container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xxl);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center; /* Center text adjacent to image */
+}
+
+.project_result_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.project_result_title {
+  font-family: "Tanker", sans-serif;
+  font-size: var(--font-h3);
+  color: var(--color-text-dark);
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 400;
+}
+
+.project_result_text {
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: var(--font-h4);
+  color: var(--color-text-dark);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.project_result_media {
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  display: flex; /* Prevent inline image extra space */
+}
+
+/* Specific styling for the top right border defined in Figma (#3E474E) */
+.project_result_media.border_outline {
+  border: 1px solid #3e474e;
+}
+
+.project_result_img {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project_detail_page_intro_section {
+    height: 50vh;
+    padding: var(--spacing-xl) 0;
+  }
+
+  .project_detail_page_intro_container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .project_detail_page_info_container {
+    flex-direction: column;
+    padding: var(--spacing-md);
+  }
+
+  .project_info_item {
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(13, 27, 30, 0.1); /* Subtle separator */
+  }
+
+  .project_info_item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .project_background_section,
+  .project_process_section,
+  .project_result_section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .project_background_container,
+  .project_process_container {
+    flex-direction: column;
+    padding: 0 var(--spacing-md);
+    gap: var(--spacing-lg);
+  }
+
+  .project_result_container {
+    grid-template-columns: 1fr; /* Switch to single column for mobile */
+    padding: 0 var(--spacing-md);
+    gap: var(--spacing-lg);
+  }
+
+  .project_background_title,
+  .project_process_title,
+  .project_result_title {
+    font-size: var(
+      --font-h2
+    ); /* Slightly larger fallback on mobile if desired, standard var flow */
+  }
+}

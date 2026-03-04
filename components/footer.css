@@ -1,33 +1,33 @@
 /* --- FOOTER COMPONENT --- */
 
-.footer {
+.footer-section {
+  position: relative;
+  background: var(--color-bg-dark); /* #0D1B1E */
+  width: 100%;
+  padding: var(--spacing-xl) 80px; /* 48px 80px matching Figma */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: var(--spacing-xl); /* 48px */
-  padding: var(--spacing-xl) 80px; /* 48px 80px */
-  background-color: var(--color-bg-dark); /* #0D1B1E */
-  width: 100%;
-  margin: 0 auto;
+  gap: var(--spacing-xl); /* 48px gap to copyright row */
 }
 
-.footer_top {
+/* --- Top Row Container --- */
+.footer_top_row {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: var(--spacing-xl); /* 48px */
   width: 100%;
   max-width: 1440px;
 }
 
-.footer_nav {
+/* --- Left Group: Navigation --- */
+.footer_nav_group {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--spacing-sm); /* 16px */
-  width: 100%;
-  max-width: 524px;
+  flex: 1; /* Distribute equal space to sides to center the logo */
 }
 
 .footer_menu_item {
@@ -38,7 +38,7 @@
 
 .footer_menu_item a {
   font-family: "Chivo", sans-serif;
-  font-size: var(--spacing-sm); /* 16px */
+  font-size: 16px;
   color: var(--color-text-light); /* #FFFFFF */
   text-decoration: none;
   line-height: 22px;
@@ -50,24 +50,31 @@
   color: var(--color-primary);
 }
 
+/* --- Center Group: Logo --- */
+.footer_logo_group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer_logo {
   font-family: "Tanker", sans-serif;
-  font-size: 40px; /* Using fixed 40px since it's a specific logo typography treatment */
+  font-size: 40px;
   color: var(--color-primary); /* #B2FFA9 */
   line-height: 43px;
   text-transform: uppercase;
-  flex-shrink: 0;
+  text-align: center;
   white-space: pre-wrap;
-  width: 271px;
 }
 
-.footer_socials {
+/* --- Right Group: Socials --- */
+.footer_social_group {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   gap: var(--spacing-sm); /* 16px */
-  flex: 1;
+  flex: 1; /* Counter-balances nav side to keep logo perfectly centered */
 }
 
 .social_link {
@@ -87,40 +94,55 @@
   display: block;
 }
 
+/* --- Bottom Row: Copyright --- */
+.footer_bottom_row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .footer_copyright {
-  font-family:
-    "Chivo", sans-serif; /* Fallback to Chivo bold since Chubbo might not be included */
+  font-family: "Chivo", sans-serif; /* Fallback for Chubbo Bold */
   font-weight: 700;
   font-size: 12px;
   color: var(--color-text-light); /* #FFFFFF */
   line-height: 29px;
   text-align: center;
-  width: 100%;
   margin: 0;
 }
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
-  .footer {
-    padding: var(--spacing-lg) var(--spacing-md);
+  .footer-section {
+    padding: var(--spacing-xl) var(--spacing-md);
   }
 
-  .footer_top {
+  .footer_top_row {
     flex-direction: column;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-xl); /* Add generous space between stacked groups */
   }
 
-  .footer_nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer_logo {
-    text-align: center;
-    width: auto;
-  }
-
-  .footer_socials {
+  /* Reset flex to prevent groups forcing width distribution on mobile */
+  .footer_nav_group,
+  .footer_social_group {
+    flex: auto;
     justify-content: center;
+    width: 100%;
+  }
+
+  /* Stack nav links */
+  .footer_nav_group {
+    flex-wrap: wrap; /* Allows links to wrap to second line on tiny screens */
+  }
+}  .gooey-animations {
+    top: 10px;
+    width: 100%;
+    left: 0;
+    height: 1rem;
+    background: var(--color-bg-dark);
+    transform: translateY(40%);
+    z-index: 3000;
+    overflow: visible;
+    pointer-events: none;
   }
 }
