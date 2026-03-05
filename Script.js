@@ -47,6 +47,27 @@ function initializeNavbar() {
     });
   }
 
+  // Handle routing for navbar links when not on the homepage
+  const isHomePage =
+    window.location.pathname.endsWith("index.html") ||
+    window.location.pathname === "/" ||
+    window.location.pathname.endsWith("/");
+  const allNavLinks = document.querySelectorAll(
+    ".header__link, .mobile-menu__link",
+  );
+
+  allNavLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+
+      // If the link is an anchor link (starts with #) and we are not on the homepage
+      if (href && href.startsWith("#") && !isHomePage) {
+        e.preventDefault(); // Stop default scroll behavior
+        window.location.href = `index.html${href}`; // Redirect to homepage + anchor
+      }
+    });
+  });
+
   // Scroll Spy Logic for active links
   const sections = document.querySelectorAll("section[id]");
   const navItems = document.querySelectorAll(".header__nav-item");

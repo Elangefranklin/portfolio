@@ -151,7 +151,7 @@
 .project_background_text {
   font-family: "Chivo", sans-serif;
   font-weight: 400;
-  font-size: var(--font-h4);
+  font-size: var(--font-body);
   color: var(--color-text-dark);
   line-height: 1.2;
   margin: 0;
@@ -224,7 +224,7 @@
 .project_process_text {
   font-family: "Chivo", sans-serif;
   font-weight: 400;
-  font-size: var(--font-h4);
+  font-size: var(--font-body);
   color: var(--color-text-light);
   line-height: 1.2;
   margin: 0;
@@ -267,7 +267,7 @@
 .project_result_text {
   font-family: "Chivo", sans-serif;
   font-weight: 400;
-  font-size: var(--font-h4);
+  font-size: var(--font-body);
   color: var(--color-text-dark);
   line-height: 1.2;
   margin: 0;

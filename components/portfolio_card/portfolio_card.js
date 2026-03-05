@@ -3,35 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!portfolioGrid) return;
 
-  const projects = [
-    {
-      title: "Project Ett",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: "assets/img/poject_1.jpg",
-      link: "#",
-    },
-    {
-      title: "Project Två",
-      description:
-        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "assets/img/project_2.jpg",
-      link: "#",
-    },
-    {
-      title: "Project Tre",
-      description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "assets/img/project_3.jpg",
-      link: "#",
-    },
-    {
-      title: "Project Fyra",
-      description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-      image: "assets/img/project_4.jpg",
-      link: "#",
-    },
-  ];
+  const projects =
+    typeof projectsData !== "undefined"
+      ? projectsData
+      : window.projectsData || [];
 
   projects.forEach((project) => {
     const cardHTML = createPortfolioCard(project);
@@ -43,14 +18,14 @@ function createPortfolioCard(project) {
   return `
     <article class="portfolio_card">
       <div class="portfolio_card_image_container">
-        <img src="${project.image}" alt="${project.title}" />
+        <img src="${project.thumbnail}" alt="${project.title}" />
       </div>
       <div class="portfolio_card_content">
         <h3 class="portfolio_card_title">${project.title}</h3>
         <p class="project_card_description">
           ${project.description}
         </p>
-        <a href="${project.link}" class="btn-project">
+        <a href="project_detail_page.html?id=${project.id}" class="btn-project">
           Se project
           <span class="project_btn_icon">
             <svg
