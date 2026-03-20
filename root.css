@@ -1,7 +1,7 @@
 :root {
   /* --- FÄRGER --- */
   /* Baserat på din design (neongrön, svart och accenter) */
-  --color-primary: #b2ffa9;
+  --color-primary: #d5edd3;
   --color-bg-dark: #0d1b1e;
   --color-bg-light: #f8fdf8;
   --color-text-dark: #0d1b1e;
@@ -36,7 +36,7 @@
   --font-h5: clamp(1.1rem, 2vw, 1.25rem);
   --font-h6: clamp(1rem, 1.5vw, 1.1rem);
 
-  --font-body: 1rem;
+  --font-body: 1.3rem;
   --font-nav: 1.1rem;
 
   /* --- ÖVRIGT --- */

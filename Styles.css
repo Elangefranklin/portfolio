@@ -30,7 +30,7 @@ body {
   align-items: center;
   padding: var(--spacing-xxl);
   background-color: var(--color-primary);
-
+  min-height: 80vh;
   margin: 0 auto;
 }
 
@@ -180,43 +180,130 @@ body {
   align-items: flex-start;
   gap: var(--sp-xs);
 }
+.portfolio-subtitle {
+  font-size: var(--font-body);
+}
+/* --- Portfolio Card (Overlay Design) --- */
+.card {
+  position: relative;
+  display: block; /* Ensure the link behaves like a block container */
+  text-decoration: none; /* Remove underline from the outer link */
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--border-radius-sm); /* Mapped 10px to sm radius */
+  overflow: hidden;
+  cursor: pointer;
+  /* Use inherited Chivo font primarily, override for headers below */
+}
 
-.portfolio_card {
+/* Image */
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Slight zoom on hover */
+.card:hover .card-image {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.card-overlay {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: var(--sp-md);
+  justify-content: flex-end;
+  padding: var(--spacing-md); /* Mapped 24px */
+  color: var(--color-text-light); /* White */
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.35) 40%,
+    rgba(0, 0, 0, 0) 70%
+  );
+
+  transition: background 0.3s ease;
 }
-.portfolio_card_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: var(--sp-xs);
+
+/* Title */
+.card-overlay h3 {
+  font-family: "Tanker", sans-serif;
+  font-size: var(--font-h4); /* Replaced 1.3rem */
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
 }
-.btn-project {
+
+/* Description */
+.card-overlay p {
+  margin-top: var(--spacing-xs); /* Replaced 6px */
+  font-family: "Chivo", sans-serif;
+  font-size: var(--font-body); /* Replaced 0.9rem */
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* Link */
+.card-link {
   display: inline-flex;
   align-items: center;
-  gap: var(--sp-xs); /* 16px */
-  color: var(--color-text-li);
+  margin-top: var(--spacing-sm); /* Replaced 16px */
   font-family: "Chivo", sans-serif;
+  font-size: var(--font-body); /* Replaced 0.9rem */
   font-weight: 500;
-  font-size: var(--font-body);
   text-decoration: none;
-  cursor: pointer;
+  color: var(--color-text-light);
+
+  opacity: 0;
+  transform: translateY(10px);
   transition:
-    background-color var(--transition-fast),
-    transform var(--transition-fast);
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
-.btn-project:hover {
-  color: var(--color-primary);
+/* Arrow */
+.card-link span {
+  margin-left: var(--spacing-xs); /* Replaced 8px */
+  transition: transform 0.25s ease;
 }
 
-.btn-project .project_btn_icon {
-  width: 24px;
-  height: 24px;
+/* Hover effects */
+.card:hover .card-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+.card:hover .card-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover .card-link span {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments for the card */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%; /* Allow full width on mobile grid */
+  }
+  .card-overlay {
+    padding: var(--spacing-sm); /* Mapped 20px */
+  }
+
+  /* Font sizes are handled by fluid calc in variables now, but we can override if needed */
 }
 
 /* About me section */

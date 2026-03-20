@@ -1,11 +1,10 @@
 const projectsData = [
   {
     id: "project-1",
-    title: "GOAT Magazine  Sportmagasindesign",
-    subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    thumbnail: "assets/img/poject_1.jpg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "GOAT Magazine",
+    subtitle: "Lorem ipsum dolor sit amet",
+    thumbnail: "assets/img/new_paper_project/gf_mockup_1_1024.webp",
+    description: "Skolprojekt: Grafisk Design",
     heroImage: {
       src: "assets/img/new_paper_project/gf_mockup_1_1440.webp",
       srcset:
